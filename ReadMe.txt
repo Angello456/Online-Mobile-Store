@@ -7,4 +7,4 @@ Lakshan - Product Management Services
 Kasun - Services regarding Payment and Shipping
 Shopping - Services regarding placing order(Shopping cart)
 
-Use this version control system to update our project.
+Use this version control system to update our project
