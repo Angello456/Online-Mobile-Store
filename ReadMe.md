@@ -12,6 +12,7 @@ Extract PlaceOrder and PlaceOrderClient Parts Seperately,and open them using ecl
 Use, http:// localhost:9090/Order     to start get all function
 
 
+ ...How Run User Management Services...
 ... how to run user managment service --
 downlord the userManagment and PafClient-2 parts Seperately, and import them eclips or STS. then update the project and run the userManagment using postman and check the all crud operation work propely. after that check the services using PafClient-2( client part) using web browser. 
 before run the  PafClient-2 you should run userManagment api
