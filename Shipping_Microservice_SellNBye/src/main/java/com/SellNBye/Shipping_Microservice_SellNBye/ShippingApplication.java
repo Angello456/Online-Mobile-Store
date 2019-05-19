@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
-@SpringBootApplication //mark this class as spring boot application
+@SpringBootApplication //mark this class as a spring boot application
 @EnableJpaAuditing
 public class ShippingApplication {
 
