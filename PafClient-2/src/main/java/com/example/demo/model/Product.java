@@ -1,50 +1,81 @@
 package com.example.demo.model;
 
+import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Product {
-	
-	    private long product_no;
-	    private String Product_name;
-	    private String Product_image;
-	    private long product_price;
-	    private int product_quantity;
-	    public long getProduct_no() {
-			return product_no;
-		}
-		public void setProduct_no(long product_no) {
-			this.product_no = product_no;
-		}
-		public String getProduct_name() {
-			return Product_name;
-		}
-		public void setProduct_name(String product_name) {
-			Product_name = product_name;
-		}
-		public String getProduct_image() {
-			return Product_image;
-		}
-		public void setProduct_image(String product_image) {
-			Product_image = product_image;
-		}
-		public long getProduct_price() {
-			return product_price;
-		}
-		public void setProduct_price(long product_price) {
-			this.product_price = product_price;
-		}
-		public int getProduct_quantity() {
-			return product_quantity;
-		}
-		public void setProduct_quantity(int product_quantity) {
-			this.product_quantity = product_quantity;
-		}
-		public String getProduct_brand() {
-			return Product_brand;
-		}
-		public void setProduct_brand(String product_brand) {
-			Product_brand = product_brand;
-		}
-		private String Product_brand;
 
+	private long code;
+	private String name;
+    private double price;
+    private int qty;
+    private byte[] image;
+    private Date createDate;
+    private Long shop_id;
+    
+   
+
+	
+
+	public long getCode() {
+		return code;
+	}
+
+	public void setCode(long code) {
+		this.code = code;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getQty() {
+		return qty;
+	}
+
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+
+	public byte[] getImage() {
+		return image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Long getShop_id() {
+		return shop_id;
+	}
+
+	public void setShop_id(Long shop_id) {
+		this.shop_id = shop_id;
+	}
+    
+
+    
+    
 }

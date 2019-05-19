@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8"/>
-    <title>delete user</title>
+    <title>Products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
 	<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,20 +16,6 @@ body {font-family: "Lato", sans-serif}
 </style>
 <body>
 </head><body>
-<div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" th:href="@{/user/login}" class="w3-bar-item w3-button w3-padding-large">Login</a>
-    <a href="#" th:href="@{/user/newuser}" class="w3-bar-item w3-button w3-padding-large">Register New User</a>
-    <a href="#" th:href="@{/user/edituser}" class="w3-bar-item w3-button w3-padding-large w3-hide-small"  >Edit Profile</a>
-    <a  href="#" th:href="@{/user/delete}" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Delete My Account</a>
-    <a  href="#" th:href="@{/user/allusers}"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">administration </a>
-    
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-
-</div>
-</div>
-</div>
 
 <div class="container-fluid">
     <div class="container">
@@ -42,25 +28,20 @@ body {font-family: "Lato", sans-serif}
                         </h3>
                     </div>
                     <div class="panel-body">
-                        <form method="post" action="#" th:action="@{/user/delete}" th:object="${user}" id="signUp" role="form">
+                        <form method="post" action="#" th:action="@{/api/add}" th:object="${product}" id="signUp" role="form">
                             <!--<div class="form-title " > Registration Form</div>-->
                             <div class="form-group">
-                                <label for="txtFname"><span class="req">* </span>User ID: </label>
-                                <input class="form-control" type="text" name="firstName" id="txtFname" required="true" th:field="*{id}"  />
+                                <label for="txtFname"><span class="req">* </span>User Name: </label>
+                                <input class="form-control" type="text" name="firstName" id="txtFname" required="true" th:field="*{name}">
+               
                             </div>
                            
                          
                             <div class="form-group">
                                 <input class="btn btn-success btn-primary" type="submit" name="submit_reg"
-                                       value="Delete"/>
+                                       value="Save"/>
                             </div>
                         </form>
-                        <br/>
-                         <form method="get" action="#" th:action="@{/user/allusers}">
-                         				<div>
-    									<input  class="btn btn-success btn-primary" type="submit" value="Check     " />
-    									</div>
-						</form>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"/>
+</head>
+<body>
+    <div class="container">
+      <div th:if="${not #lists.isEmpty(product)}">
+      <button id="showH" class="btn1" type="submit" >Products</button>
+          <h1>Product List</h1>
+        <table id="tableP" class="highlight">
+            <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Image</th>
+                <th>Create Date</th>
+            </tr>
+            </thead>
+                <tbody>
+                
+                    <tr th:each="products: ${product}">
+                        <td th:text="${products.code}"></td>
+                        <td th:text="${products.name}"></td>
+                        <td th:text="${products.price}"></td>
+                        <td th:text="${products.qty}"></td>
+                        <td th:text="${products.image}"></td>
+                        <td th:text="${products.createDate}"></td>
+                        <td><a th:href="${'/products/' + products.code}">Details</a></td>
+                    </tr>
+                </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function(){
+    		  $('#showH').on('click',function(){
+    		  $('#tableP').toggle();
+    		  })
+    		});
+    </script>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</body>
+</html>
